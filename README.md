@@ -38,4 +38,4 @@ Works in modern browsers that support Web Audio API, including:
 
 ## Sample Files
 
-The player includes several sample MOD files from the Wolfenstein 3D game for testing and demonstration purposes. 
+The player includes several sample MOD files
