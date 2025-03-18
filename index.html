@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ObiWeb MOD Player</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>ObiWeb MOD Player</h1>
+        
+        <div class="upload-container" id="dropZone">
+            <input type="file" id="fileInput" accept=".mod">
+            <p>Drop MOD file here or click to select</p>
+        </div>
+        
+        <div class="player-container" id="playerContainer">
+            <div class="metadata">
+                <div class="song-info">
+                    <h2 id="songTitle">No file loaded</h2>
+                    <p id="songDetails">-</p>
+                </div>
+            </div>
+            
+            <div class="visualization-container">
+                <div class="visualization">
+                    <canvas id="visualizer"></canvas>
+                </div>
+            
+            </div>
+            
+            <div class="pattern-viewer">
+                <h3>Pattern Data</h3>
+                <div class="pattern-grid" id="patternViewer">
+                    <div class="pattern-headers">
+                        <div class="row-number">Row</div>
+                        <div class="channel-headers" id="channelHeaders">
+                            <!-- Will be populated by JavaScript -->
+                        </div>
+                    </div>
+                    <div class="pattern-rows" id="patternRows">
+                        <!-- Will be populated by JavaScript -->
+                    </div>
+                </div>
+            </div>
+            
+            <div class="sample-viewer">
+                <h3>Samples</h3>
+                <div class="sample-list" id="sampleViewer">
+                    <!-- Will be populated by JavaScript -->
+                </div>
+            </div>
+            
+            <div class="controls">
+                <button id="playBtn" disabled>Play</button>
+                <button id="pauseBtn" disabled>Pause</button>
+                <button id="stopBtn" disabled>Stop</button>
+                
+                <div class="volume-container">
+                    <label for="volumeControl">Volume:</label>
+                    <input type="range" id="volumeControl" min="0" max="100" value="70">
+                </div>
+                
+                <div class="seek-container">
+                    <input type="range" id="seekBar" min="0" max="100" value="0" disabled>
+                    <div class="time-display">
+                        <span id="currentTime">0:00</span> / 
+                        <span id="totalTime">0:00</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="sample-files">
+            <h3>Sample MOD Files</h3>
+            <div id="sampleFiles">
+                <!-- Will be populated by JavaScript -->
+            </div>
+        </div>
+    </div>
+    
+    <script src="mod-player.js"></script>
+</body>
+</html> 

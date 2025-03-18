@@ -1,0 +1,41 @@
+Requirements:
+Core Functionality
+Load MOD Files:
+
+Allow users to upload and play MOD music files via an <input type="file"> element.
+Ensure playback works fully in the browser with no server-side dependencies.
+Playback Controls:
+
+Play, Pause, Stop buttons.
+Seek through the track using a slider.
+Audio Processing:
+
+Decode and play MOD music using a JavaScript-based library (e.g., libopenmpt or mod.js).
+Use Web Audio API for playback.
+Visualization:
+
+Implement a real-time visualizer (e.g., waveform, frequency bars, or scrolling note data).
+Use <canvas> and Web Audio’s AnalyserNode to render visuals.
+Technical Constraints:
+Must be standalone: No Node.js, Webpack, or any external build system.
+No frameworks: Pure JavaScript (vanilla ES6+), HTML, and CSS only.
+No server-side processing: Everything must run in the browser.
+Cross-browser compatibility: Ensure support for modern browsers (Chrome, Firefox, Edge).
+User Interface (UI) Requirements:
+Minimalistic design, using CSS for styling.
+A drag-and-drop file uploader in addition to the file input.
+A playback timeline/seek bar.
+Display track metadata (e.g., title, artist, number of channels).
+Optional: A track pattern viewer to visualize MOD channel data.
+Suggested Implementation Plan:
+Setup UI with basic HTML elements.
+Integrate MOD file decoding with a library like libopenmpt.js or mod.js.
+Implement Web Audio API for playback.
+Create a visualizer using Canvas API and Web Audio’s AnalyserNode.
+Add playback controls with event listeners.
+Enhance with UI improvements, animations, and metadata display.
+Deliverables:
+A single HTML file (index.html) with embedded JavaScript and CSS.
+A JavaScript file (mod-player.js) that handles audio playback and visualization.
+A CSS file (style.css) for styling.
+Ensure all files can be opened and run directly in a browser without any setup.
